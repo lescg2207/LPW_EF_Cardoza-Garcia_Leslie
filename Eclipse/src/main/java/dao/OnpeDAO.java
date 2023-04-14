@@ -48,6 +48,11 @@ public class OnpeDAO {
 		db.Sentencia( "usp_getGruposVotacion " + idLocalVotacion );
 		return db.getColumna();
 	}
+
+	public Object getTotalPC() {
+		db.Sentencia( "sp_getResumen_Cardoza_Garcia");
+		return db.getRegistro();
+	}
 	
 }
 	
